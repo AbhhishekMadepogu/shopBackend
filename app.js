@@ -7,6 +7,7 @@ const app = express();
 require("dotenv/config");
 const api = process.env.API_URL;
 const productsRouter = require("./routes/products");
+const categoryRouter = require("./routes/categories");
 
 //middleware
 app.use(cors);
@@ -24,6 +25,6 @@ mongoose
     console.log(process.env.CONNECTION_STRING);
   });
 
-app.listen(3000, () => {
-  console.log("Server running http://localhost:3000");
+app.listen(8000, () => {
+  console.log("Server running http://localhost:8000");
 });
